@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="euckr" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<properties resource="mailer.properties" />
+
+	<environments default="default">
+		<environment id="default">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${datasource.driver}" />
+				<property name="url" value="${datasource.url}" />
+				<property name="username" value="${datasource.username}" />
+				<property name="password" value="${datasource.password}" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="camel/example/mailer/data/MailerMapper.xml" />
+	</mappers>
+
+</configuration>
