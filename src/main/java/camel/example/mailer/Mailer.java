@@ -44,6 +44,8 @@ public class Mailer {
 
 		// 메일러 완료
 		logger.info("Mailer done.");
+		// 카멜 컨텍스트 종료
+		context.stop();
 
 	}
 
